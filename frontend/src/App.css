@@ -1,0 +1,21 @@
+:root{
+  --bg-color:rgb(20,20,20);
+  --accent-color:rgb(255, 165, 13);
+  --shadow-color:rgb(200,200,200);
+  --text-color-light:rgb(255,255,255);
+  --text-color-dark:rgb(20,20,20);
+  --log-w-google:rgb(255,255,255);
+  --font-size-sm:14px;
+  --font-size-md:22px;
+  --font-size-lg:32px;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+ul{}
+li{}
