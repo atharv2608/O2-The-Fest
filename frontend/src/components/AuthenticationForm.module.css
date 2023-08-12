@@ -1,0 +1,93 @@
+.form {
+  max-width: 50%;
+  margin: 5% auto;
+}
+h1 {
+  text-align: center;
+}
+p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form label,
+.form input,
+.form textarea {
+  width: 75%;
+  margin: auto;
+  margin-top: 5%;
+}
+.form label {
+  display: none;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 5%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actions button {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: #fab833;
+  color: #1f1d1b;
+  border: none;
+  margin: 7%;
+}
+
+.actions a {
+}
+
+.actions button:hover {
+  background-color: #f6ad1b;
+  color: aliceblue;
+}
+
+.actions a:hover {
+  background-color: var(--color-gray-800);
+}
+.toggleLogin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.toggleLogin a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #1f1d1b;
+}
+.toggleLogin a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #881e88;
+  font-size: larger;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 90%;
+    margin: 5% auto;
+  }
+  .form label,
+  .form input,
+  .form textarea {
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+  }
+  .form label {
+    display: block;
+  }
+}
