@@ -1,14 +1,25 @@
-import AppCss from "../src/App.module.css";
-import Navbar from "./components/Navbar";
-import NavLoggedIn from "./components/NavLoggedIn";
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./pages/RootLayout";
+import HomePage from "./pages/HomePage";
+import LoginPage, { action as loginAction } from "./pages/LoginPage";
+import { action as logoutAction } from "./pages/Logout";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "auth", element: <LoginPage />, action: loginAction },
+      {
+        path: "logout",
+        action: logoutAction,
+      },
+    ],
+  },
+]);
 function App() {
-  return (
-    <div className={AppCss.container}>
-      <NavLoggedIn />
-      {/* <Navbar /> */}
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

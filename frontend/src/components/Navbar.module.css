@@ -28,9 +28,6 @@
   font-weight: bold;
 }
 
-.button_container {
-}
-
 .button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
@@ -82,7 +79,7 @@
   flex-direction: row;
   padding: 20px;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 50px;
   color: #f39c12;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
