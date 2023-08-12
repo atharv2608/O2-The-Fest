@@ -1,11 +1,13 @@
-import './App.css';
-import Navbar from './components/Navbar';
-
+import AppCss from "../src/App.module.css";
+import Navbar from "./components/Navbar";
+import NavLoggedIn from "./components/NavLoggedIn";
+import React from "react";
 function App() {
   return (
-    <>
-      <Navbar />
-    </>
+    <div className={AppCss.container}>
+      <NavLoggedIn />
+      {/* <Navbar /> */}
+    </div>
   );
 }
 
