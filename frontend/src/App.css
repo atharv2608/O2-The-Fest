@@ -1,21 +1,47 @@
 :root{
-  --bg-color:rgb(20,20,20);
-  --accent-color:rgb(255, 165, 13);
+  --bg-dark::rgb(20,20,20);
+  --accent-primary:rgb(255, 165, 13);
+  --accent-color1:rgb(255, 212, 139);
+  --accent-color2:rgb(255, 234, 199);
   --shadow-color:rgb(200,200,200);
   --text-color-light:rgb(255,255,255);
   --text-color-dark:rgb(20,20,20);
   --log-w-google:rgb(255,255,255);
+  --accent-red:rgb(255, 67, 67);
+  --accent-green:rgb(76, 175, 80);
   --font-size-sm:14px;
-  --font-size-md:22px;
+  --font-weight-sm: 300;
+  --font-size-md:18px;
+  --font-weight-md: 400;
   --font-size-lg:32px;
+  --font-weight-lg: 600;
 }
-* {
-    padding: 0;
-    margin: 0;
+*{
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-sm);
 }
 a{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* width: 100%; */
   text-decoration: none;
-  color: var(--text-color-dark);
+  color: var(--accent-color2);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-md);
 }
-ul{}
-li{}
+
+a:hover {
+  font-weight: var(--font-weight-lg );
+}
+ul {
+  cursor: pointer;
+  display: flex;
+  gap: 19px;
+  align-items: center;
+  list-style-type: none;
+}
