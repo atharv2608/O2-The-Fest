@@ -1,40 +1,23 @@
+@import "../App.css";
+
 .container {
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: 10px;
-  color: white;
+  color: var(--text-color-light);
   padding: 10px 20px;
-  background-color: black;
+  background-color: var(--text-color-dark);
 }
-
-.links {
-  cursor: pointer;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  list-style-type: none;
-}
-
 /*apply styling for link here*/
-.link {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  color: white;
-}
-
-.link:hover {
-  font-weight: bold;
-}
 
 .button {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
-  color: white;
   padding: 8px 10px;
   background-color: #f39c12;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 .button:hover {
   font-weight: bold;
@@ -46,8 +29,8 @@
 
 /*loggedin navbar css starts*/
 .user_img {
-  border: 3px solid #f39c12;
-  border-radius: 50px;
+  border: 2px solid var(--accent-primary);
+  border-radius: 50px;  
 }
 
 .user_card_container {
@@ -82,13 +65,11 @@
   justify-content: flex-start;
   gap: 50px;
   color: #f39c12;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: x-large;
 }
 
 .user_email_container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-left: 20px;
   font-weight: bolder;
 }
@@ -109,7 +90,6 @@
 }
 
 .drpdwn_user_card_container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 1px solid #f39c12;
   padding: 20px;
   display: flex;
@@ -202,6 +182,7 @@
   color: white;
   animation: growDown 400ms ease-in-out forwards;
   transform-origin: top center;
+  z-index: +1;
 }
 
 /*for visibility of dropdown menu*/
@@ -268,8 +249,8 @@
 /*responsive design*/
 
 /* mobile devices */
-@media (max-width: 576px) {
-  .links {
+@media (width < 576px) {
+  ul {
     display: none;
   }
 
@@ -284,8 +265,8 @@
 }
 
 /* small devices  */
-@media (min-width: 576px) and (max-width: 768px) {
-  .links {
+@media (width < 768px) {
+  ul {
     display: none;
   }
 
@@ -305,6 +286,9 @@
 
 /*medium devices*/
 @media (min-width: 768px) and (max-width: 992px) {
+  .dropdown_menu_container {
+    display: none;
+  }
 }
 
 /*large devices */

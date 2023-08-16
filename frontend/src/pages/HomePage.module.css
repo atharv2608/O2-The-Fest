@@ -1,0 +1,6 @@
+@import '../App.css';
+.container{
+  display: flex;
+  justify-content: center;
+  text-align: start;
+}
