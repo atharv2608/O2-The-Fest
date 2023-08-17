@@ -2,5 +2,12 @@
 .container{
   display: flex;
   justify-content: center;
-  text-align: start;
+  font-size: var(--font-size-lg);
+}
+.txt{
+  user-select: none;
+}
+.formContainer{
+  display: flex;
+  justify-content: center;
 }
