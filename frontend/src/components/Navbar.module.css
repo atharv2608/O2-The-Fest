@@ -12,7 +12,7 @@
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
-  padding: 5px 5px;
+  padding: 5px 15px;
   background-color: rgb(20, 20, 20);
 }
 
@@ -30,6 +30,11 @@
 .link {
   padding: 15px 15px;
   height: 100%;
+}
+
+.link:hover {
+  color: #ffa50d;
+  font-weight: 600;
 }
 
 .ham_and_usrimg_container {
@@ -68,6 +73,10 @@
   padding: 20px 10px;
 }
 
+.dropdown_link:hover {
+  color: #ffa50d;
+  font-weight: 600;
+}
 /*dropdown card */
 
 .card_container {
@@ -86,6 +95,12 @@
 .dropdown_img_container {
   padding-right: 30px;
   height: 100%;
+}
+
+.profile_img {
+  object-fit: cover;
+  border: 2px solid #ffa50d;
+  border-radius: 50%;
 }
 
 .dropdown_details_and_btn_container {
@@ -183,6 +198,7 @@
   }
 }
 
+/*remove these if not needed*/
 /*medium devices*/
 @media (min-width: 768px) and (max-width: 992px) {
 }
