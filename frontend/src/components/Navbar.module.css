@@ -28,6 +28,7 @@
 
 /*apply styling to links here*/
 .link {
+  font-size: 20px;
   padding: 15px 15px;
   height: 100%;
 }
@@ -69,6 +70,7 @@
 
 /* apply styling to drop down links here*/
 .dropdown_link {
+  font-size: 20px;
   width: 100%;
   padding: 20px 10px;
 }
