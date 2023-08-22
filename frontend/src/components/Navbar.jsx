@@ -1,15 +1,21 @@
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useEffect, useRef, useContext } from "react";
 import navbarCss from "./Navbar.module.css";
 import { Twirl as Hamburger } from "hamburger-react";
 import logo from "../images/logo.png";
 import usrlogo from "../images/userimg.png";
 import myphoto from "../images/myphoto.jpeg";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import AuthContext from "../store/auth-context";
 
 const Navbar = () => {
   //front end logic starts
   const [menuOpen, setMenuOpen] = useState(false);
   const [userCardOpen, setUserCardOpen] = useState(false);
+  const navigate=useNavigate();
+  const handleLogin=()=>{
+    navigate("/auth?mode=login")
 
+  }
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
     setUserCardOpen(false);
@@ -39,35 +45,42 @@ const Navbar = () => {
   //active tab logic would be done after applying routes
 
   // check here whether user signed in or not
-  //temporary sign off logic
-  const [authsignin, setAuthSignIn] = useState(true);
+  //new temporary sign up logic
+  const authctx = useContext(AuthContext);
+  
 
-  //if user signed in
-  if (authsignin) {
-    return (
+
+      return (
       <header className={navbarCss.header_container} ref={headerRef}>
         <nav className={navbarCss.container}>
           <div className={navbarCss.logo_container}>
-            <a href="#">
+            <NavLink to="/">
               {" "}
               <img src={logo} height="50px" width="50px" alt="" />
-            </a>
+            </NavLink>
           </div>
           <div className={navbarCss.links_container}>
-            <a href="#" className={navbarCss.link}>
+            <NavLink to="/"className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              } end>
               Home
-            </a>
-            <a href="#" className={navbarCss.link}>
-              About Us
-            </a>
-            <a href="#" className={navbarCss.link}>
+            </NavLink>
+            {/* <NavLink to="/events" className={`${navbarCss.link} ${navLinkHighlight}`}>
               Events
-            </a>
-            <a href="#" className={navbarCss.link}>
+            </NavLink> */}
+            <NavLink to="/events"   className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              }>
+              Events
+            </NavLink>
+            <NavLink to="/sponsers" className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              }>
               Sponsors
-            </a>
+            </NavLink>
           </div>
           <div className={navbarCss.ham_and_usrimg_container}>
+            {authctx.isLoggedIn&&
             <div className={navbarCss.usrimg_container}>
               <img
                 className={navbarCss.profile_img}
@@ -78,6 +91,21 @@ const Navbar = () => {
                 alt=""
               />
             </div>
+              }
+            {!authctx.isLoggedIn&&
+            <div className={navbarCss.usrimg_container}>
+                       {/* this image should send user login form and sign up form */}
+                        <img
+                          className={navbarCss.profile_img}
+                          onClick={handleLogin}
+                          src={usrlogo}
+                          height="40px"
+                          width="40px"
+                          title="Signup/Login"
+                          alt=""
+                        />
+                      </div>
+            }
             <div className={navbarCss.ham_container}>
               <Hamburger
                 className={navbarCss.hamburger}
@@ -86,6 +114,7 @@ const Navbar = () => {
                 size={20}
               />
             </div>
+
           </div>
         </nav>
         {userCardOpen && (
@@ -108,18 +137,19 @@ const Navbar = () => {
               </div>
               <div className={navbarCss.dropdown_btn_container}>
                 <div>
-                  <a className={navbarCss.btn_edit} href="#">
+                  <Link className={navbarCss.btn_edit} to="#">
                     <i class="fa-solid fa-pen-to-square"></i> Edit Profile
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     className={navbarCss.btn_logout}
-                    href="#"
-                    onClick={() => setAuthSignIn(false)}
+                    to="#"
+                    onClick={() => {authctx.isLoggedIn=false
+                      setUserCardOpen(false)}}
                   >
                     <i class="fa-solid fa-right-from-bracket"></i> Log Out
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -128,91 +158,22 @@ const Navbar = () => {
         {menuOpen && (
           <nav className={navbarCss.dropdown_container}>
             <div className={navbarCss.dropdown_links_container}>
-              <a href="#" className={navbarCss.dropdown_link}>
+              <NavLink to="/" className={navbarCss.dropdown_link}>
                 Home
-              </a>
-
-              <a href="#" className={navbarCss.dropdown_link}>
-                About Us
-              </a>
-              <a href="#" className={navbarCss.dropdown_link}>
+              </NavLink>
+              <NavLink to="/events" className={navbarCss.dropdown_link}>
                 Events
-              </a>
-              <a href="#" className={navbarCss.dropdown_link}>
+              </NavLink>
+              <NavLink to="/sponsers" className={navbarCss.dropdown_link}>
                 Sponsors
-              </a>
+              </NavLink>
             </div>
           </nav>
         )}
       </header>
     );
-  }
-  //if user is not signed in
-  else {
-    return (
-      <header className={navbarCss.header_container} ref={headerRef}>
-        <nav className={navbarCss.container}>
-          <div className={navbarCss.logo_container}>
-            <img src={logo} height="50px" width="50px" alt="" />
-          </div>
-          <div className={navbarCss.links_container}>
-            <a href="#" className={navbarCss.link}>
-              Home
-            </a>
-            <a href="#" className={navbarCss.link}>
-              About Us
-            </a>
-            <a href="#" className={navbarCss.link}>
-              Events
-            </a>
-            <a href="#" className={navbarCss.link}>
-              Sponsors
-            </a>
-          </div>
-          <div className={navbarCss.ham_and_usrimg_container}>
-            <div className={navbarCss.usrimg_container}>
-              {/* this image should send user login form and sign up form */}
-              <img
-                className={navbarCss.profile_img}
-                src={usrlogo}
-                height="40px"
-                width="40px"
-                title="Signup/Login"
-                alt=""
-              />
-            </div>
-            <div className={navbarCss.ham_container}>
-              <Hamburger
-                size={20}
-                onToggle={handleMenuToggle}
-                toggled={menuOpen}
-              />
-            </div>
-          </div>
-        </nav>
+  
 
-        {menuOpen && (
-          <nav className={navbarCss.dropdown_container}>
-            <div className={navbarCss.dropdown_links_container}>
-              <a href="#" className={navbarCss.dropdown_link}>
-                Home
-              </a>
-
-              <a href="#" className={navbarCss.dropdown_link}>
-                About Us
-              </a>
-              <a href="#" className={navbarCss.dropdown_link}>
-                Events
-              </a>
-              <a href="#" className={navbarCss.dropdown_link}>
-                Sponsors
-              </a>
-            </div>
-          </nav>
-        )}
-      </header>
-    );
-  }
 };
 
 export default Navbar;
