@@ -65,15 +65,12 @@ const Navbar = () => {
               } end>
               Home
             </NavLink>
-            {/* <NavLink to="/events" className={`${navbarCss.link} ${navLinkHighlight}`}>
-              Events
-            </NavLink> */}
             <NavLink to="/events"   className={({ isActive }) =>
                 isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
               }>
               Events
             </NavLink>
-            <NavLink to="/sponsers" className={({ isActive }) =>
+            <NavLink to="/sponsors" className={({ isActive }) =>
                 isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
               }>
               Sponsors
@@ -158,13 +155,19 @@ const Navbar = () => {
         {menuOpen && (
           <nav className={navbarCss.dropdown_container}>
             <div className={navbarCss.dropdown_links_container}>
-              <NavLink to="/" className={navbarCss.dropdown_link}>
+              <NavLink to="/"className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              }>
                 Home
               </NavLink>
-              <NavLink to="/events" className={navbarCss.dropdown_link}>
+              <NavLink to="/events" className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              }>
                 Events
               </NavLink>
-              <NavLink to="/sponsers" className={navbarCss.dropdown_link}>
+              <NavLink to="/sponsors" className={({ isActive }) =>
+                isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+              }>
                 Sponsors
               </NavLink>
             </div>

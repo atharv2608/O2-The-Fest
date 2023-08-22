@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage, { action as loginAction } from "./pages/LoginPage";
 import { action as logoutAction } from "./pages/Logout";
 import EventsPage from "./pages/EventsPage";
-import SponsersPage from "./pages/SponsersPage";
+import SponsorsPage from "./pages/SponsorsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "events", element: <EventsPage /> },
-      { path: "sponsers", element: <SponsersPage />, action: loginAction },
+      { path: "sponsers", element: <SponsorsPage />, action: loginAction },
       { path: "auth", element: <LoginPage />, action: loginAction },
       {
         path: "logout",
