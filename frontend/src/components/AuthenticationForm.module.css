@@ -15,10 +15,10 @@
   flex-direction: row;
   margin: 20px;
 }
-h1 {
+.headingContainer h1 {
   color: var(--shadow-color);
 }
-a,
+.headingContainer a,
 span {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-lg);
@@ -27,7 +27,7 @@ span {
   text-decoration: underline;
   color: var(--text-color-dark);
 }
-p{
+p {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-lg);
   color: var(--text-color-dark);

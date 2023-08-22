@@ -1,5 +1,5 @@
-import React from "react";
 import AuthenticationForm from "../components/AuthenticationForm";
+
 import { redirect } from "react-router-dom";
 
 const LoginPage = () => {
@@ -13,6 +13,5 @@ const LoginPage = () => {
 export default LoginPage;
 
 export const action = async () => {
-    return redirect("/");
-  };
-  
+  return redirect("/");
+};

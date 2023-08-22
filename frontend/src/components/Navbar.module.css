@@ -3,8 +3,8 @@
 .header_container {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .container {
@@ -67,6 +67,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.active {
+  color: var(--accent-primary);
+}
 
 /* apply styling to drop down links here*/
 .dropdown_link {
@@ -120,7 +123,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .username_txt {
@@ -136,7 +139,7 @@
 .dropdown_btn_container {
   display: flex;
   width: 100%;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
