@@ -4,7 +4,7 @@ import HomePageCSS from "./HomePage.module.css";
 const HomePage = () => {
   return (
     <>
-      <div className={HomePageCSS.container}>hello</div>
+      <div className={HomePageCSS.container}>Homepage</div>
     </>
   );
 };
