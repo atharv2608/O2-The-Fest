@@ -9,11 +9,11 @@
   --log-w-google:rgb(255,255,255);
   --accent-red:rgb(255, 67, 67);
   --accent-green:rgb(76, 175, 80);
-  --font-size-sm:14px;
+  --font-size-sm:clamp(14px,4vw,16px);
   --font-weight-sm: 300;
-  --font-size-md:18px;
+  --font-size-md:clamp(24px,8vw,36px);
   --font-weight-md: 400;
-  --font-size-lg:32px;
+  --font-size-lg:clamp(42px,10vw,60px);
   --font-weight-lg: 600;
 }
 *{
@@ -22,8 +22,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-sm);
+  /* font-size: var(--font-size-sm); */
+  /* font-weight: var(--font-weight-sm); */
 }
 a{
   /* display: flex; */
@@ -36,7 +36,20 @@ a{
 }
 
 a:hover {
-  font-weight: var(--font-weight-lg );
+  font-weight: var(--font-weight-lg);
+}
+h1{
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+}
+h2{
+
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-md);
+}
+h3{
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-sm);
 }
 ul {
   cursor: pointer;
@@ -80,11 +93,6 @@ input:last-child{
 }
 input:focus{
   outline: none;
-}
-h1 {
-  text-align: center;
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-sm);
 }
 form{
   display: flex;
