@@ -1,0 +1,22 @@
+@import '../App.css';
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 5vw;
+  background: var(--accent-primary);
+}
+.content{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  background: var(--accent-primary);
+
+}
+/* @media (width<768px){
+  .content{
+    padding: 0rem 1rem;
+  }
+} */
