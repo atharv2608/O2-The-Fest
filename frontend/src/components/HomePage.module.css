@@ -1,15 +1,14 @@
 /* Note for everyone there should not be css files in pages folder import components from components folder into the Pages and then provide relevant styles to components */
 @import "../App.css";
+
 .container {
   display: flex;
   justify-content: center;
-  font-size: var(--font-size-lg);
+  /* font-size: var(--font-size-lg); */
+  flex-direction: column;
+  background: var(--accent-color2);
 }
-.txt {
-  user-select: none;
-}
-.formContainer {
+section{
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }

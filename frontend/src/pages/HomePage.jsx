@@ -1,18 +1,19 @@
 import React from "react";
-import AuthenticationForm from '../components/AuthenticationForm';
-import HomeCss from "./HomePage.module.css";
+import AboutO2 from "../components/AboutO2";
+// import AuthenticationForm from '../components/AuthenticationForm';
+import EventCards from "../components/EventCards";
+import HomeCss from "../components/HomePage.module.css";
+
 const HomePage = () => {
   return (
     <>
       <div className={HomeCss.container}>
         <section>
-          {/* <EventLabels /> */}
-          <AuthenticationForm />
+          <EventCards />
+          {/* <AuthenticationForm /> */}
         </section>
         <section>
-          <div className={HomeCss.container}>
-            <p>O2 The Fest</p>
-          </div>
+          <AboutO2 />
         </section>
       </div>
     </>
