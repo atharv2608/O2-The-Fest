@@ -17,22 +17,22 @@
   margin: 20px;
 }
 .headingContainer h1 {
-  color: var(--shadow-color);
-}
-.headingContainer a,
-span {
-  font-size: var(--font-size-lg);
+  color: var(--text-color-dark);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-lg);
 }
-.activated a {
-  text-decoration: underline;
-  color: var(--text-color-dark);
-}
-p {
-  font-size: var(--font-size-md);
+
+
+p{
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-lg);
   color: var(--text-color-dark);
   padding: 5%;
+}
+.loginStat a{
+  color:#881e88;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
 }
 
 .form label,
@@ -50,8 +50,8 @@ p {
 .form textarea .actions button {
   font: inherit;
   padding: 0.5rem;
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
   /* border-radius: 10px 10px 0 0; */
 }
 
@@ -70,32 +70,20 @@ p {
   border: none;
   margin-top: 2%;
   border-radius: 0 0 10px 10px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
 }
+
 
 .actions button:hover {
   background-color: #f6ad1b;
   color: aliceblue;
 }
+.actions button:disabled {
+  color: aliceblue;
+  cursor:not-allowed;
+}
 
-.actions a:hover {
-  background-color: var(--color-gray-800);
-}
-.toggleLogin {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.toggleLogin a {
-  text-decoration: none;
-  background-color: transparent;
-  color: #1f1d1b;
-}
-.toggleLogin a:hover {
-  text-decoration: underline;
-  background-color: transparent;
-  color: #881e88;
-  font-size: larger;
-}
 
 @media (max-width: 750px) {
   .formContainer {
