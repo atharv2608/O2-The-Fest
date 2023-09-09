@@ -1,11 +1,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./pages/RootLayout";
+import AccountPageM from "./pages/AccountPageM";
+import EventsPage from "./pages/EventsPage";
 import HomePage from "./pages/HomePage";
 import LoginPage, { action as loginAction } from "./pages/LoginPage";
 import { action as logoutAction } from "./pages/Logout";
-import EventsPage from "./pages/EventsPage";
+import RootLayout from "./pages/RootLayout";
 import SponsorsPage from "./pages/SponsorsPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,7 @@ const router = createBrowserRouter([
       { path: "events", element: <EventsPage /> },
       { path: "sponsors", element: <SponsorsPage />, action: loginAction },
       { path: "auth", element: <LoginPage />, action: loginAction },
+      { path: "account", element: <AccountPageM />, action: loginAction },
       {
         path: "logout",
         action: logoutAction,

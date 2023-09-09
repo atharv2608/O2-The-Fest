@@ -183,7 +183,7 @@
 }
 
 /* small devices  */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (width< 768px) {
   .links_container {
     position: relative;
     display: none;
@@ -192,6 +192,10 @@
   .ham_container {
     display: block;
     color: white;
+  }
+
+  .usrimg_container {
+    display: none;
   }
 
   .dropdown_container {
