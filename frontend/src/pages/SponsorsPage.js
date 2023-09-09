@@ -1,7 +1,11 @@
 import React from "react";
 
 const SponsorsPage = () => {
-  return <div>This is sponsors</div>;
+  return (
+    <>
+      <p>Sponsors Page</p>
+    </>
+  )
 };
 
 export default SponsorsPage;

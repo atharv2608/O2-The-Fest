@@ -1,22 +1,23 @@
-:root{
-  --bg-dark::rgb(20,20,20);
-  --accent-primary:rgb(255, 165, 13);
-  --accent-color1:rgb(255, 212, 139);
-  --accent-color2:rgb(255, 234, 199);
-  --shadow-color:rgb(200,200,200);
-  --text-color-light:rgb(255,255,255);
-  --text-color-dark:rgb(20,20,20);
-  --log-w-google:rgb(255,255,255);
-  --accent-red:rgb(255, 67, 67);
-  --accent-green:rgb(76, 175, 80);
-  --font-size-sm:clamp(14px,4vw,16px);
+:root {
+  --bg-dark: :rgb(20, 20, 20);
+  --accent-primary: rgb(255, 165, 13);
+  --accent-color1: rgb(255, 212, 139);
+  --accent-color2: rgb(255, 234, 199);
+  --shadow-color: rgb(200, 200, 200);
+  --text-color-light: rgb(255, 255, 255);
+  --text-color-dark: rgb(20, 20, 20);
+  --log-w-google: rgb(255, 255, 255);
+  --accent-red: rgb(255, 67, 67);
+  --accent-green: rgb(76, 175, 80);
+  --font-size-sm: clamp(14px, 4vw, 16px);
   --font-weight-sm: 300;
-  --font-size-md:clamp(24px,8vw,36px);
+  --font-size-md: clamp(24px, 8vw, 36px);
   --font-weight-md: 400;
-  --font-size-lg:clamp(42px,10vw,60px);
+  --font-size-lg: clamp(42px, 10vw, 60px);
   --font-weight-lg: 600;
 }
-*{
+
+* {
   font-family: 'Nunito', sans-serif;
   letter-spacing: -0.5px;
   margin: 0;
@@ -25,7 +26,8 @@
   /* font-size: var(--font-size-sm); */
   /* font-weight: var(--font-weight-sm); */
 }
-a{
+
+a {
   /* display: flex; */
   /* justify-content: center; */
   /* width: 100%; */
@@ -38,19 +40,23 @@ a{
 a:hover {
   font-weight: var(--font-weight-lg);
 }
-h1{
+
+h1 {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-lg);
 }
-h2{
+
+h2 {
 
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-md);
 }
-h3{
+
+h3 {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-sm);
 }
+
 ul {
   cursor: pointer;
   display: flex;
@@ -58,7 +64,8 @@ ul {
   align-items: center;
   list-style-type: none;
 }
-button{
+
+button {
   font-size: var(--font-size-md);
   /* background: var(--accent-color2); */
   padding: 5px 10px 5px 10px;
@@ -66,14 +73,17 @@ button{
   border: none;
   /* color: var(--accent-red); */
 }
-button:active{
+
+button:active {
   transform: translateY(1px);
   box-shadow: 0px 1px var(--shadow-color);
 }
-button:hover{
+
+button:hover {
   /* background: var(--accent-color1); */
 }
-input{
+
+input {
   border: 1px solid var(--text-color-dark);
   height: 66px;
   width: 227px;
@@ -82,25 +92,31 @@ input{
   padding: 0px 10px 0px 10px;
   margin: 5px;
 }
-input:first-child:last-child{
+
+input:first-child:last-child {
   border-radius: 10px;
 }
-input:first-child{
+
+input:first-child {
   border-radius: 10px 10px 0px 0px;
 }
-input:last-child{
+
+input:last-child {
   border-radius: 0px 0px 10px 10px;
 }
-input:focus{
+
+input:focus {
   outline: none;
 }
-form{
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
 }
-form > button{
+
+form>button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,5 +124,9 @@ form > button{
   width: 100%;
   margin: 5px;
   height: 66px;
-  width: 227px; 
+  width: 227px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

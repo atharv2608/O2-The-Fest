@@ -5,7 +5,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import '../App.css';
 import logo from "../images/logo.png";
 import myphoto from "../images/myphoto.jpeg";
-import usrlogo from "../images/userimg.png";
 import AuthContext from "../store/auth-context";
 import navbarCss from "./Navbar.module.css";
 
@@ -175,6 +174,11 @@ const Navbar = () => {
               isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
             }>
               Sponsors
+            </NavLink>
+            <NavLink to="/account" className={({ isActive }) =>
+              isActive ? `${navbarCss.active} ${navbarCss.link}` : navbarCss.link
+            }>
+              Account
             </NavLink>
           </div>
         </nav>
