@@ -12,9 +12,18 @@ import mcdonaldslogo from "../images/mcdonalds-7.svg";
 import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
+import "swiper/css/free-mode";
 // import required modules
-import { EffectFlip, Autoplay, Pagination, Navigation } from "swiper/modules";
+import {
+  EffectFade,
+  EffectFlip,
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectCoverflow,
+} from "swiper/modules";
 
 const Sponsors = () => {
   return (
@@ -23,22 +32,24 @@ const Sponsors = () => {
         <div className={sponsorCss.sponsors_container_1_content}>
           <div className={sponsorCss.sponsor_title}>Our Sponsors</div>
           <div className={sponsorCss.sponsor_desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            dolorum autem deserunt officia a laboriosam culpa veniam totam harum
-            unde veritatis odit in, cumque eos sunt quaerat. Earum, dicta nam?
-            Accusamus deleniti ipsam doloribus pariatur quam ad dolores, cum
-            molestiae in possimus excepturi sequi itaque ab cupiditate dolorum
-            nobis molestias at, mollitia tempora sapiente? Est repellat velit
-            eligendi magni? Asperiores. Accusamus voluptates architecto omnis
-            vitae aut? Mollitia, itaque. Voluptate magnam libero suscipit qui,
-            repellendus aliquid explicabo ipsam, consectetur mollitia quis
-            provident quam exercitationem, vero repudiandae reprehenderit earum
-            ex perferendis ab?
+            We would like to extend our heartfelt gratitude to our esteemed
+            partners for their generous support of the O2 Festival. Their
+            unwavering commitment to our event has played a pivotal role in
+            making this celebration of music and culture possible. We are deeply
+            appreciative of the support from brands like Coca-Cola, Pepsi,
+            McDonald's, and many more, who have joined hands with us to bring
+            the O2 Festival to life. Their contribution has not only enriched
+            the festival experience but also enabled us to create unforgettable
+            memories for our attendees. We cherish our partnership with these
+            remarkable brands and look forward to continued collaboration in the
+            years to come. Thank you for making the O2 Festival a resounding
+            success, and for being an integral part of our journey.
           </div>
         </div>
         <div className={sponsorCss.sponsors_img_content_container}>
           <Swiper
             effect={"flip"}
+            loop={true}
             grabCursor={true}
             autoplay={{
               delay: 2500,
@@ -69,6 +80,10 @@ const Sponsors = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+      </div>
+      <div className={sponsorCss.sponsors_container_2}>
+        <div className={sponsorCss.past_sponsors_title}></div>
+        <div className={sponsorCss.past_sponsors_img_container}></div>
       </div>
     </div>
   );
