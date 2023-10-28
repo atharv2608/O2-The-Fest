@@ -1,8 +1,8 @@
-
-.outerContainer{
+.outerContainer {
     display: flex;
     justify-content: center;
 }
+
 .countdownContainer {
     display: flex;
     background-color: #ffa50d;
@@ -10,6 +10,7 @@
     padding: 20px;
     width: 60vw;
     border-radius: 25px;
+    gap: 5px;
 }
 
 .timeElement,
@@ -20,6 +21,8 @@
 
 .textElement {
     font-size: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 .timeElement {
@@ -37,5 +40,8 @@
         0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
         0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
         0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-    width: 12rem;
+    /* width: 12rem; */
+    width: 25%;
+    border-radius: 10px;
+    background-color: var(--text-color-light);
 }
