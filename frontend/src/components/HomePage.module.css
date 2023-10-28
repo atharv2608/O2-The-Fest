@@ -1,13 +1,14 @@
 /* Note for everyone there should not be css files in pages folder import components from components folder into the Pages and then provide relevant styles to components */
 @import "../App.css";
 
-.textContainer{
+.textContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 85vh;
 }
+
 .homeSection::before {
   content: "";
   position: absolute;
@@ -18,17 +19,20 @@
   background: url("../images/home-bg4.jpg") center/cover no-repeat;
   opacity: 0.7;
   z-index: -1;
+  filter: blur(5px);
+  /* -webkit-filter: blur(3px); */
 }
 
-.heading{
+.heading {
   color: var(--text-color-light);
   text-transform: uppercase;
   font-weight: 900;
 }
-.subTitle{
+
+.subTitle {
   color: var(--accent-primary);
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight:900;
+  font-weight: 900;
 }
