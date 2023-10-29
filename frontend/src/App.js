@@ -1,7 +1,9 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AccountPageM from "./pages/AccountPageM";
+import DashBoard from "./pages/DashBoard";
 import EventsPage from "./pages/EventsPage";
+import GalleryPage from "./pages/GalleryPage";
 import HomePage from "./pages/HomePage";
 import LoginPage, { action as loginAction } from "./pages/LoginPage";
 import { action as logoutAction } from "./pages/Logout";
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
       { path: "sponsors", element: <SponsorsPage />, action: loginAction },
       { path: "auth", element: <LoginPage />, action: loginAction },
       { path: "account", element: <AccountPageM />, action: loginAction },
+      { path: "gallery", element: <GalleryPage />, action: loginAction },
       {
         path: "logout",
         action: logoutAction,
