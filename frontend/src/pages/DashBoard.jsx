@@ -1,5 +1,5 @@
 import React from 'react';
-import DSB from '../components/DashBoard.module.css';
+import DSB from "../components/Dashboard.module.css"
 const DashBoard = () => {
   return (
     <>
