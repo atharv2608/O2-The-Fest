@@ -3,11 +3,10 @@ import Footer from "./Footer";
 import sponsorCss from "./Sponsors.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import o2logo from "../images/o2-2.svg";
-import cocacolalogo from "../images/coca-cola-4.svg";
-import pepsilogo from "../images/pepsi-12.svg";
-import spritelogo from "../images/sprite-3.svg";
-import mcdonaldslogo from "../images/mcdonalds-7.svg";
+
+import cocacolalogo from "../images/sponsors/coca-cola-4.svg";
+import spritelogo from "../images/sponsors/sprite-3.svg";
+import mcdonaldslogo from "../images/sponsors/mcdonalds-7.svg";
 
 //sponsor images import
 import sponsorlogo1 from "../images/sponsors/sponsorlogo1.png";
