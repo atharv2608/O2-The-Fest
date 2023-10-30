@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import sponsorCss from "./Sponsors.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +9,12 @@ import pepsilogo from "../images/pepsi-12.svg";
 import spritelogo from "../images/sprite-3.svg";
 import mcdonaldslogo from "../images/mcdonalds-7.svg";
 
+//sponsor images import
+import sponsorlogo1 from "../images/sponsors/sponsorlogo1.png";
+import sponsorlogo2 from "../images/sponsors/sponsorlogo2.png";
+import sponsorlogo3 from "../images/sponsors/sponsorlogo3.png";
+import sponsorlogo4 from "../images/sponsors/sponsorlogo4.png";
+import sponsorlogo5 from "../images/sponsors/sponsorlogo5.png";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -59,7 +66,7 @@ const Sponsors = () => {
             navigation={false}
             cubeEffect={{
               shadow: true,
-              slideShadows: true,
+              slideShadows: false,
               shadowOffset: 20,
               shadowScale: 0.94,
             }}
@@ -71,26 +78,26 @@ const Sponsors = () => {
             className={sponsorCss.swiper}
           >
             <SwiperSlide className={sponsorCss.swiper_slide}>
-              <img src={pepsilogo} />
+              <img src={sponsorlogo1} />
             </SwiperSlide>
 
             <SwiperSlide className={sponsorCss.swiper_slide}>
-              <img src={o2logo} />
+              <img src={sponsorlogo2} />
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide}>
-              <img src={cocacolalogo} />
+              <img src={sponsorlogo3} />
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide}>
-              <img src={spritelogo} />
+              <img src={sponsorlogo4} />
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide}>
-              <img src={mcdonaldslogo} />
+              <img src={sponsorlogo5} />
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
       <div className={sponsorCss.sponsors_container_2}>
-        <div className={sponsorCss.past_sponsors_title}>Our Past sponsors</div>
+        <div className={sponsorCss.past_sponsors_title}>Our Past Sponsors</div>
         <div className={sponsorCss.past_sponsors_img_container}>
           <Swiper
             slidesPerView={1}
@@ -122,35 +129,49 @@ const Sponsors = () => {
             className={sponsorCss.swiper2}
           >
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={spritelogo} height="300" width="300" />
+              <img src={sponsorlogo1} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={cocacolalogo} height="300" width="300" />
+              <img src={sponsorlogo2} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={o2logo} height="300" width="300" />
+              <img src={sponsorlogo3} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={pepsilogo} height="300" width="300" />
+              <img src={sponsorlogo4} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={mcdonaldslogo} height="300" width="300" />
+              <img src={sponsorlogo5} />
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={cocacolalogo} height="300" width="300" />
+              <img src={spritelogo} />
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={cocacolalogo} height="300" width="300" />
+              <img src={cocacolalogo} />
+            </SwiperSlide>
+
+            <SwiperSlide className={sponsorCss.swiper_slide2}>
+              <img src={sponsorlogo1} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={cocacolalogo} height="300" width="300" />
+              <img src={sponsorlogo2} />{" "}
             </SwiperSlide>
             <SwiperSlide className={sponsorCss.swiper_slide2}>
-              <img src={cocacolalogo} height="300" width="300" />
+              <img src={sponsorlogo3} />{" "}
+            </SwiperSlide>
+            <SwiperSlide className={sponsorCss.swiper_slide2}>
+              <img src={sponsorlogo4} />{" "}
+            </SwiperSlide>
+            <SwiperSlide className={sponsorCss.swiper_slide2}>
+              <img src={sponsorlogo5} />
+            </SwiperSlide>
+            <SwiperSlide className={sponsorCss.swiper_slide2}>
+              <img src={mcdonaldslogo} />
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
