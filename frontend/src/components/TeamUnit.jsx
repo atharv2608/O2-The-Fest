@@ -3,7 +3,7 @@ import classes from './TeamUnit.module.css';
 import image1 from '../images/teams/userDefaultImg1.webp';
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 
-const TeamUnit = () => {
+const TeamUnit = (props) => {
 	return (
 		<div className={classes.unitContainer}>
 			<div className={classes.imageContainer}>
@@ -14,8 +14,12 @@ const TeamUnit = () => {
 				/>
 			</div>
 			<div className={classes.userDetails}>
-				<p className={classes.name}>Rahul Nair</p>
-				<p className={classes.role}>CL</p>
+				<div className={classes.name}>
+					<p className={classes.firstname}>{props.user.firstName}</p>
+					<p className={classes.lastname}>{props.user.lastName}</p>
+				</div>
+
+				<p className={classes.role}>{props.user.role}</p>
 			</div>
 			<div className={classes.socialHandles}>
 				<p className={classes.insta}>

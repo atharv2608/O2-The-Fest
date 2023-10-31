@@ -1,7 +1,7 @@
 .unitContainer {
 	width: 100%;
 	padding: 1.5rem 0;
-	border-bottom: 2px solid black;
+	border-bottom: 3px solid var(--accent-primary);
 	display: flex;
 }
 .imageContainer {
@@ -19,8 +19,10 @@
 	flex-direction: column;
 	align-self: center;
 }
-.userDetails .name {
+.userDetails .firstname,
+.userDetails .lastname {
 	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	padding: 0;
 }
 .userDetails .role {
 	font-size: clamp(1rem, 3vw, 2rem);
@@ -37,4 +39,26 @@
 .socialIcon {
 	width: clamp(1.5rem, 4vw, 2.5rem);
 	height: clamp(1.5rem, 4vw, 2.5rem);
+}
+@media (min-width: 768px) {
+	.unitContainer {
+		width: 25%;
+		flex-direction: column;
+	}
+	.imageContainer {
+		position: relative;
+		width: 100%;
+		padding: 15px;
+		background: url('../images/teams/portraitBG.svg') center top no-repeat;
+	}
+	.userDetails,
+	.socialHandles {
+		width: 100%;
+	}
+	.userDetails,
+	.name,
+	.role,
+	.socialHandles {
+		text-align: center;
+	}
 }

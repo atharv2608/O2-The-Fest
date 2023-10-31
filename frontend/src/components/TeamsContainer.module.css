@@ -35,7 +35,7 @@
 	color: var(--accent-primary);
 	letter-spacing: 1.5px;
 	justify-content: space-between;
-	position: relative; /* Add this line to establish a containing context for absolute positioning */
+	position: relative;
 }
 
 .teamsnavigation .dropdownArrow {
@@ -60,10 +60,26 @@
 		display: flex;
 		justify-content: space-around;
 		margin: 2rem 0;
-		font-size: var(--font-size-sm);
-		font-weight: var(--font-weight-sm);
+		font-size: clamp(1rem, 3vw, 1.5rem);
+		font-weight: var(--font-weight-md);
 	}
 	.teamsnavigation {
 		display: none;
+	}
+	.active {
+		text-decoration: underline;
+		text-underline-offset: 0.5rem;
+		background-color: var(--accent-primary);
+		color: white;
+		font-weight: var(--font-weight-lg);
+	}
+	.navUnit {
+		padding: 1rem;
+		border-radius: 5rem;
+	}
+	.teamsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
