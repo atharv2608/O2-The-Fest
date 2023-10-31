@@ -218,6 +218,15 @@ const Navbar = () => {
 							Sponsors
 						</NavLink>
 						<NavLink
+							to='/teams'
+							className={({ isActive }) =>
+								isActive
+									? `${navbarCss.active} ${navbarCss.link}`
+									: navbarCss.link
+							}>
+							Our Team
+						</NavLink>
+						<NavLink
 							to='/account'
 							className={({ isActive }) =>
 								isActive
