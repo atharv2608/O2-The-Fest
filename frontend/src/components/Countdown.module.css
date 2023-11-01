@@ -7,7 +7,7 @@
     display: flex;
     background-color: #ffa50d;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 10px;
     width: 60vw;
     border-radius: 25px;
     gap: 5px;
@@ -34,6 +34,8 @@
 .hoursContainer,
 .minutesContainer,
 .secondsContainer {
+    padding: 5px;
+    margin: 0 4px;
     box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
             100%, 0.075),
         0 0 0 1px hsla(0, 0%, 0%, 0.05),
@@ -41,7 +43,101 @@
         0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
         0 3.5px 6px hsla(0, 0%, 0%, 0.09);
     /* width: 12rem; */
-    width: 25%;
+    width: 100%;
     border-radius: 10px;
     background-color: var(--text-color-light);
 }
+
+
+@media (width< 768px) {
+    .countdownContainer {
+        padding: 10px;
+        width: 95%;
+        border-radius: 25px;
+        gap: 5px;
+    }
+
+    .timeElement,
+    .textElement {
+        text-align: center;
+        margin: auto;
+    }
+
+    .textElement {
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .timeElement {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .daysContainer,
+    .hoursContainer,
+    .minutesContainer,
+    .secondsContainer {
+        padding: 15px;
+        margin: 0 2px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: var(--text-color-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*medium devices*/
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .countdownContainer {
+        padding: 10px;
+        width: 70%;
+        border-radius: 25px;
+        gap: 5px;
+    }
+
+    .timeElement,
+    .textElement {
+        text-align: center;
+        margin: auto;
+    }
+
+    .textElement {
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .timeElement {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .daysContainer,
+    .hoursContainer,
+    .minutesContainer,
+    .secondsContainer {
+        padding: 15px;
+        margin: 0 2px;
+        width: 50%;
+        border-radius: 10px;
+        background-color: var(--text-color-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}
+
+/*large devices */
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+/*more than large*/
+@media (min-width: 1200px) {}

@@ -1,22 +1,60 @@
 @import '../App.css';
-.container{
-  display: flex;
-  flex-direction: column;
-  padding: 2vw 5vw;
-  background: var(--accent-primary);
-}
-.content{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  margin: 0;
-  background: var(--accent-primary);
 
+.aboutSection{
+    background-color: var(--accent-color2);
+    height: 100%;
 }
-/* @media (width<768px){
-  .content{
-    padding: 0rem 1rem;
-  }
-} */
+
+.countdown{
+    margin-top: 1.5rem;
+}
+
+.aboutContainer{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoContainer img{
+    height: 400px;
+}
+
+.aboutTextContent{
+    width: 50vw;
+}
+.aboutTextContent p{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 576px){
+    .aboutContainer{
+        flex-wrap:wrap;
+    }
+    .logoContainer img{
+        height: 200px;
+    }
+    .aboutTextContent{
+        width: 100vw;  
+    }
+    .aboutTextContent p{
+        font-size: 1rem;
+    }
+}
+/*medium devices*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .logoContainer img{
+        height: 300px;
+    }
+    .aboutTextContent p{
+        font-size: 1.1rem;
+    }
+}
+
+/*large devices */
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+/*more than large*/
+@media (min-width: 1200px) {}
