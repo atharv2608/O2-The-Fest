@@ -102,6 +102,15 @@ const Navbar = () => {
 						}>
 						Sponsors
 					</NavLink>
+					<NavLink
+						to='/gallery'
+						className={({ isActive }) =>
+							isActive
+								? `${navbarCss.active} ${navbarCss.link}`
+								: navbarCss.link
+						}>
+						Gallery
+					</NavLink>
 				</div>
 				<div className={navbarCss.ham_and_usrimg_container}>
 					{authctx.isLoggedIn && (
