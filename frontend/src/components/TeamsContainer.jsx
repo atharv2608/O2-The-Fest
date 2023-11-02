@@ -41,7 +41,7 @@ const TeamsContainer = () => {
 	return (
 		<div className={classes.mainContainer}>
 			<h2 className={classes.heading}>
-				Meet the <span>team.</span>
+				Meet the <span>team</span>
 			</h2>
 
 			<nav className={classes.teamsNav}>
