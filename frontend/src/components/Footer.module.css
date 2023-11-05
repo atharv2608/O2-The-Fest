@@ -14,7 +14,12 @@
   flex-wrap: wrap;
 
   padding: 30px 10px;
-  gap: 80px;
+  gap: 50px;
+}
+
+.content_section_1 {
+  width: 50%;
+  max-width: 200px;
 }
 
 .content_section_2 {
