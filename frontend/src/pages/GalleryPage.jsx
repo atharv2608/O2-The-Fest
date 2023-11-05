@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, EffectFlip, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
+import Footer from '../components/Footer';
 import GP from '../components/GalleryPage.module.css';
 
 import Gallery from '../components/Gallery';
@@ -33,6 +34,9 @@ const GalleryPage = () => {
 
   return (
     <>
+      <div className={GP.header}>
+        <h1>What's Popin</h1>
+      </div>
       <Swiper
         slidesPerView={1}
         spaceBetween={40}
@@ -179,6 +183,7 @@ const GalleryPage = () => {
           <Gallery />
         </div>
       ) : null}
+      <Footer />
     </>
   )
 }
