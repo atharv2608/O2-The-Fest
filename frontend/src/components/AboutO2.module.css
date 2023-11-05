@@ -1,54 +1,69 @@
-@import '../App.css';
+/* @import '../App.css'; */
 
-.aboutSection{
+.aboutSection {
     background-color: var(--accent-color2);
     height: 100%;
+    width: 100vw;
 }
 
-.countdown{
+.countdown {
     margin-top: 1.5rem;
 }
 
-.aboutContainer{
+.aboutContainer {
     display: flex;
     margin-top: 2rem;
-    justify-content: space-around;
+    justify-content: center;
+    /* justify-content: space-around; */
     align-items: center;
 }
 
-.logoContainer img{
-    height: 400px;
+.logoContainer {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
 }
 
-.aboutTextContent{
+.logoContainer img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.aboutTextContent {
     width: 50vw;
 }
-.aboutTextContent p{
+
+.aboutTextContent p {
     font-size: 1.3rem;
     line-height: 1.5rem;
     letter-spacing: 1px;
 }
 
-@media (max-width: 576px){
-    .aboutContainer{
-        flex-wrap:wrap;
+@media (max-width: 576px) {
+    .aboutContainer {
+        flex-wrap: wrap;
     }
-    .logoContainer img{
+
+    .logoContainer img {
         height: 200px;
     }
-    .aboutTextContent{
-        width: 100vw;  
+
+    .aboutTextContent {
+        width: 100vw;
     }
-    .aboutTextContent p{
+
+    .aboutTextContent p {
         font-size: 1rem;
     }
 }
+
 /*medium devices*/
 @media (min-width: 768px) and (max-width: 992px) {
-    .logoContainer img{
+    /* .logoContainer img {
         height: 300px;
-    }
-    .aboutTextContent p{
+    } */
+
+    .aboutTextContent p {
         font-size: 1.1rem;
     }
 }
