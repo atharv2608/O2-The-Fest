@@ -14,7 +14,7 @@ button {
 
 .swiper {
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   background-color: var(--accent-color2);
   /* border: 2px solid black; */
   padding: 0px 10px;
@@ -53,27 +53,16 @@ button {
   /* object-fit: contain; */
 }
 
-
-
-/* .section:nth-child(1) {
-  height: 85vh;
-  background-color: var(--accent-color3);
-}
-
-.section:nth-child(2) {
-  height: 100vh;
-  background-color: var(--accent-color1);
-}
-
-.section:nth-child(3) {
-  height: 100vh;
-  background-color: var(--accent-color2);
-}
-
-.section:nth-child(4) {
+.header {
+  padding: 10px;
+  background-color: var(--text-color-dark);
+  height: 10vh;
+  min-height: 78px;
   display: flex;
-  height: 20vh;
-  background-color: var(--text-color-light);
   justify-content: center;
   align-items: center;
-} */
+}
+
+.header h1 {
+  color: var(--accent-primary)
+}

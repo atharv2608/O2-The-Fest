@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./AboutO2.module.css";
 import logo from "../images/logo.png";
+import style from "./AboutO2.module.css";
 import Countdown from "./Countdown";
 export default function AboutO2() {
   return (
@@ -8,12 +8,11 @@ export default function AboutO2() {
       <div className={style.countdown}>
         <Countdown />
       </div>
-
       <div className={style.aboutContainer}>
-        
+
         <div className={style.logoContainer}>
           <img
-            src={logo}
+            src={logo} width="100%"
             alt="Unable to load image. Check your internt connection!"
           />
         </div>
