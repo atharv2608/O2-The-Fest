@@ -13,12 +13,19 @@ import Footer from '../components/Footer';
 import GP from '../components/GalleryPage.module.css';
 
 import Gallery from '../components/Gallery';
-import img1 from "../images/gallery/img1.jpg";
-import img2 from "../images/gallery/img2.jpg";
-import img3 from "../images/gallery/img3.jpg";
-import img4 from "../images/gallery/img4.jpg";
-import img5 from "../images/gallery/img5v.jpg";
-import img6 from "../images/gallery/img6v.jpg";
+import PH4 from "../images/gallery/DSC00808.jpg";
+import PH6 from "../images/gallery/DSC00884.jpg";
+import PH5 from "../images/gallery/DSC00887.jpg";
+import PH1 from "../images/gallery/DSC00951.jpg";
+import PH2 from "../images/gallery/DSC00960.jpg";
+import PH3 from "../images/gallery/DSC01083.jpg";
+
+import PH9 from "../images/gallery/DSC00876.jpg";
+import PH11 from "../images/gallery/DSC00991.jpg";
+import PH10 from "../images/gallery/DSC01015.jpg";
+import PH7 from "../images/gallery/DSC01111.jpg";
+import PH8 from "../images/gallery/DSC01149.jpg";
+import PH12 from "../images/gallery/IMG_1644.jpg";
 
 const GalleryPage = () => {
 
@@ -66,44 +73,46 @@ const GalleryPage = () => {
         }}
         className={GP.swiper}
       >
+
         <SwiperSlide className={GP.slide}>
-          <img src={img1} />{" "}
+          <img src={PH1} />
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img2} />{" "}
+          <img src={PH2} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img3} />{" "}
+          <img src={PH3} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img4} />{" "}
+          <img src={PH4} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img5} />
+          <img src={PH5} />
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img6} />
+          <img src={PH6} />{" "}
         </SwiperSlide>
 
 
         <SwiperSlide className={GP.slide}>
-          <img src={img1} />{" "}
+          <img src={PH1} />
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img2} />{" "}
+          <img src={PH2} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img3} />{" "}
+          <img src={PH3} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img4} />{" "}
+          <img src={PH4} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img5} />
+          <img src={PH5} />
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img6} />
+          <img src={PH6} />{" "}
         </SwiperSlide>
+
       </Swiper>
       <Swiper
         slidesPerView={1}
@@ -137,6 +146,44 @@ const GalleryPage = () => {
         className={GP.swiper}
       >
         <SwiperSlide className={GP.slide}>
+          <img src={PH7} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH8} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH9} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH10} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH11} />
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH12} />
+        </SwiperSlide>
+
+        <SwiperSlide className={GP.slide}>
+          <img src={PH7} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH8} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH9} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH10} />{" "}
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH11} />
+        </SwiperSlide>
+        <SwiperSlide className={GP.slide}>
+          <img src={PH12} />
+        </SwiperSlide>
+
+        {/* <SwiperSlide className={GP.slide}>
           <img src={img1} />{" "}
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
@@ -152,28 +199,8 @@ const GalleryPage = () => {
           <img src={img5} />
         </SwiperSlide>
         <SwiperSlide className={GP.slide}>
-          <img src={img6} />
-        </SwiperSlide>
-
-
-        <SwiperSlide className={GP.slide}>
-          <img src={img1} />{" "}
-        </SwiperSlide>
-        <SwiperSlide className={GP.slide}>
-          <img src={img2} />{" "}
-        </SwiperSlide>
-        <SwiperSlide className={GP.slide}>
-          <img src={img3} />{" "}
-        </SwiperSlide>
-        <SwiperSlide className={GP.slide}>
-          <img src={img4} />{" "}
-        </SwiperSlide>
-        <SwiperSlide className={GP.slide}>
-          <img src={img5} />
-        </SwiperSlide>
-        <SwiperSlide className={GP.slide}>
-          <img src={img6} />
-        </SwiperSlide>
+          <img src={PH1} />
+        </SwiperSlide> */}
       </Swiper>
       <div className={GP.btnSection} onClick={handleClick}>
         <button>More</button>
