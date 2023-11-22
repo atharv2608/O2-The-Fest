@@ -244,6 +244,15 @@ const Navbar = () => {
 							}>
 							Account
 						</NavLink>
+						<NavLink
+							to='/gallery'
+							className={({ isActive }) =>
+								isActive
+									? `${navbarCss.active} ${navbarCss.link}`
+									: navbarCss.link
+							}>
+							Gallery
+						</NavLink>
 					</div>
 				</nav>
 			)}

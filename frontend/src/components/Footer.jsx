@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={footerCss.footer_container}>
       <div className={footerCss.footer_top}>
         <div className={footerCss.content_section_1}>
-          <img src={o2logo} height="200" width="200" />
+          <img src={o2logo} width="100%" />
         </div>
         <div className={footerCss.content_section_2}>
           <div className={footerCss.section_title}>Get in touch</div>
