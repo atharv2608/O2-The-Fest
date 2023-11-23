@@ -4,9 +4,9 @@
 }
 
 .card {
-  background-color: var(--accent-color3);
+  background-color: var(--accent-color1);
   color: white;
-  /* padding: 1rem; */
+  padding-left: 2px;
   aspect-ratio: 4/3;
 }
 
